@@ -1,0 +1,11 @@
+0.  An artificial long word said to mean a lung disease caused by inhaling very fine ash and sand dust.
+1.  It gets resource usage.
+2.  There are 16 members in a variable of type struct rusage.
+3.  Before and after are passed by reference to calculate in order to save time and memory as the original addresses of them are sent rather than copies - which happens when you pass by value.
+4.  The program reads characters one by one and checks if the character is alphabetical or apostrophe. If the condition is true, the character is saved in the word array. This continues until a non-alphabetical character is read after which the word is null terminated and spell-checked. If in this process a long word or a digit is read then the entire line is scrapped. 
+5.  fscanf() should be okay for reading in from the dictionary file, because the words are all separated by line returns. But, fscanf() could cause problems if used to read in from the text file because words in that file will not always end with a space or line return. Many will be followed by a period or comma, which fscanf will see as being part of the word.This won't be an issue in fgetc() as we can put check conditions and its more flexible this way.
+6.  Those parameters are used as constants so that they don't get modified inside the function, no matter the operation done on them.
+7.  I used the trie data structure as I considered it to be faster despite taking a lot of memory. Inside each of the nodes is an array of 27 pointers to more nodes (one for each letter plus an extra for apostrophes), as well as a boolean value "isWord" that is set to true when it's containing node represents the last letter in a word that is in the dictionary. It was my first choice as the pset suggested to only take the time into consideration and I thought the implementing it would give me a better understanding of this data structure.
+8.  It was 0.14 seconds in total the first time.
+9.  Introduced recursion for deallocation, removed some check conditions but didn't make much of a difference  so I optimised as much as I could for the time being.
+10. The time taken in loading and unloading suffers due to the unused pointers and the time taken to create them and checking over them.
