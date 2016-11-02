@@ -1,0 +1,92 @@
+<!--
+
+index.html
+
+Computer Science 50
+Problem Set 8
+
+A mashup of Google Maps and Google News.
+
+-->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <!-- http://getbootstrap.com/ -->
+        <link href="/css/bootstrap.min.css" rel="stylesheet"/>
+
+        <!-- app's own CSS -->
+        <link href="/css/styles.css" rel="stylesheet"/>
+
+        <!-- https://developers.google.com/maps/documentation/javascript/ Personal Key Added-->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDADbJiLTuUoGRYEWTInGkvl0GIgF3xcHo"></script>
+
+        <!-- http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerwithlabel/1.1.10/ -->
+        <script src="/js/markerwithlabel_packed.js"></script>
+
+        <!-- http://jquery.com/ -->
+        <script src="/js/jquery-1.11.3.min.js"></script>
+
+        <!-- http://getbootstrap.com/ -->
+        <script src="/js/bootstrap.min.js"></script>
+
+        <!-- http://underscorejs.org/ -->
+        <script src="/js/underscore-min.js"></script>
+
+        <!-- https://github.com/twitter/typeahead.js/ -->
+        <script src="/js/typeahead.jquery.min.js"></script>
+
+        <!-- app's own JavaScript -->
+        <script src="/js/scripts.js"></script>
+
+        <title>Mashup</title>
+
+    </head>
+    <body>
+        <style>
+            #map-canvas {
+        height: 75%;
+        width: 100%;
+        position: fixed;
+            }
+        
+            #hello {
+                text-align:center;
+            }
+            
+            .new{
+                 display: inline-block;
+                margin-left: auto;
+                margin-right: auto;
+                height: 100px;
+ 
+            }
+            }
+        
+        </style>
+
+        <!-- fill viewport -->
+        <div class="container-fluid">
+            <div id="hello">
+            <img class= "new" border="0" width= "100" src ="https://lh5.googleusercontent.com/-5HgubPx3b20/AAAAAAAAAAI/AAAAAAAAE1U/HXqd-gt9HwI/s0-c-k-no-ns/photo.jpg">
+            <left><h4>Problem Set 8: Mashup</h4>
+            <p>This is CS50. Harvard University.</p>
+            </div>
+           
+            <!-- https://developers.google.com/maps/documentation/javascript/tutorial -->
+            <div id="map-canvas"></div>
+
+            <!-- http://getbootstrap.com/css/#forms -->
+            <form class="form-inline" id="form" role="form">
+                <div class="form-group">
+                    <label class="sr-only" for="q">City, State, Postal Code</label>
+                    <input class="form-control" id="q" placeholder="City, State, Postal Code" type="text"/>
+                </div>
+            </form>
+            <div align="right"><h5>Author: Sanjoth Shaw </h5></div>
+        </div>
+
+    </body>
+</html>
