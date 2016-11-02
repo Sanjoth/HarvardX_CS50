@@ -1,0 +1,19 @@
+0.  GIF supports 256 different colours whereas BMP,JPEG support 16M different colours. PNG supports 256T different colours.
+1.  GIF supports animation.
+2.  Lossless compression allows reconstruction of the original image from the compressed data whereas a lossy image once compressed will lost some of its information hence preventing reconstruction of original image.
+3.  JPEG is a lossy-compressed format.
+4.  The references to the data on the disk are deleted from the file allocation table.
+5.  Overwriting the data on the disk with 0s.
+6.  <stdint.h> is a header file having various integer types with certain widths.
+7.  These types allows to write implementation- and plattform-independent code.
+8.  A BYTE is defined as having 8 bit, DWORD and LONG having 32bit and WORD is defined with 16 bit.
+9.  The first 2 bytes must read 0x42 0x4d.
+10. bfSize holds the file size of the bitmap, while biSize is defined as the size of the Bitmapinfoheader structure.
+11. A negative value for biHeight suggests that the vertical orientation of the image is upside-down.
+12. It is defined by : biBitCount.
+13. This command returns NULL if the user has no write permission on that file.
+14. We want to copy one individual structure per read hence fread will always be 1
+15. value of padding will be 3.
+16. fseek is used to move the position pointer through a file stream.
+17. SEEK_CUR indicates the current position of the position pointer.
+18. It looks like Mr. Rob Bowden but I couldn't be sure.
